@@ -121,8 +121,8 @@ class TaskDataProvider {
 
   Future<List<TaskModel>> searchTasks(String keywords) async {
     var searchText = keywords.toLowerCase();
-    List<TaskModel> matchedTasked = tasks;
-    return matchedTasked.where((task) {
+    List<TaskModel> matchedTasks = tasks;
+    return matchedTasks.where((task) {
       final titleMatches = task.title.toLowerCase().contains(searchText);
       final descriptionMatches = task.description.toLowerCase().contains(searchText);
       return titleMatches || descriptionMatches;
