@@ -45,6 +45,13 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
   }
 
   @override
+  void dispose() {
+    title.dispose();
+    description.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
         value: const SystemUiOverlayStyle(
